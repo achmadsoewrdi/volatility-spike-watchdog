@@ -30,8 +30,8 @@ def fetch_top_coins() -> list[dict[str, Any]]:
         response = requests.get(
             COINGECKO_API_URL,
             params=COINGECKO_PARAMS,
-            header=headers,
-            timout=REQUEST_TIMEOUT_SECONDS,
+            headers=headers,
+            timeout=REQUEST_TIMEOUT_SECONDS,
         )
 
         if response.status_code == 429:
